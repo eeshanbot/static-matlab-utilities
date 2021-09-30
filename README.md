@@ -7,3 +7,5 @@ Additionally, these are other GitHub repositories that I use:
 - [Climate Data Toolbox](https://github.com/chadagreene/CDT)
 - [export_fig](https://github.com/altmany/export_fig)
 - [jLab](https://github.com/jonathanlilly/jLab)
+- [ViolinPlot](https://github.com/bastibe/Violinplot-Matlab)
+- [easyh5](https://github.com/fangq/easyh5)
