@@ -1,20 +1,10 @@
 %% startup.m
 
-%% lamss stuff
-% addpath(genpath('~/lamss-shared/src/matlab/'));
-% addpath(genpath('~/lamss-internal/src/matlab/'));
-
-% for tloss_display
-% addpath(genpath('~/lamss-shared/src/thirdparty/at/Matlab/ReadWrite/'));
-% addpath(genpath('~/lamss-shared/src/thirdparty/at/Matlab/Bellhop/'));
-% addpath(genpath('~/lamss-shared/src/thirdparty/at/Matlab/Plot/'));
-
 V = ver;
 rel = V(1).Release;
 rel = rel(2:end-1);
 disp(rel);
 addpath(['/usr/local/MATLAB/' rel '/toolbox/local']);
-clear;
 
 %% display
 fprintf(datestr(now));
@@ -31,14 +21,15 @@ set(0, 'DefaultLineLineWidth', 2);
 
 %% paths for general toolboxes
 addpath(genpath('~/Documents/MATLAB/'));
+addpath(genpath('~/LAMSS/lamss-environmental'));
+addpath(genpath('~/Code/fig-jam-with-brie'));
 
-%% path for ECB EEOF tools
-addpath(genpath('~/lamss-environmental/'));
+%% monitor positioning
+a = get(0,'MonitorPositions');
+b = get(0,'DefaultFigurePosition');
+set(0,'DefaultFigurePosition',[a(3)+1 a(4)+1 b(3) b(4)]);
 
-%% path for ITP stuffss
-addpath(genpath('~/Code/itp-articuno/'));
-
-%% path for acoustic toolbox
-addpath(genpath('~/lamss-shared/src/thirdparty/at/Matlab/Plot'));
+%% clean up
+clear;
 
 
