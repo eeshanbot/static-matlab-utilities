@@ -23,6 +23,8 @@ set(0, 'DefaultLineLineWidth', 2);
 addpath(genpath('~/Documents/MATLAB/'));
 addpath(genpath('~/LAMSS/lamss-environmental'));
 addpath(genpath('~/Code/fig-jam-with-brie'));
+addpath(genpath('~/Code/at'));
+addpath(genpath('/home/eesh/Code/hycom-claw'));
 
 %% monitor positioning
 a = get(0,'MonitorPositions');
