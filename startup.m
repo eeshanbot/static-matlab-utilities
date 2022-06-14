@@ -20,11 +20,20 @@ set(0, 'DefaultLineLineWidth', 2);
 
 
 %% paths for general toolboxes
-addpath(genpath('~/Documents/MATLAB/'));
-addpath(genpath('~/LAMSS/lamss-environmental'));
-addpath(genpath('~/Code/fig-jam-with-brie'));
-addpath(genpath('~/Code/at'));
+restoredefaultpath;
+
+addpath(genpath('/home/eesh/Documents/MATLAB/'));
+addpath(genpath('/home/eesh/LAMSS/lamss-environmental'));
+addpath(genpath('/home/eesh/Code/fig-jam-with-brie'));
 addpath(genpath('/home/eesh/Code/hycom-claw'));
+
+% separately downloaded
+addpath(genpath('/home/eesh/Code/acoustic-toolbox/Matlab'));
+addpath(genpath('/home/eesh/Code/acoustic-toolbox/bin'));
+
+% through LAMSS
+%addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/Matlab'));
+%addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/bin'));
 
 %% monitor positioning
 a = get(0,'MonitorPositions');
