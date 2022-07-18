@@ -31,6 +31,9 @@ addpath(genpath('/home/eesh/Code/hycom-claw'));
 addpath(genpath('/home/eesh/Code/acoustic-toolbox/Matlab'));
 addpath(genpath('/home/eesh/Code/acoustic-toolbox/bin'));
 
+% temporary RAM files (clean up and package later)
+addpath(genpath('/home/eesh/Code/abb-code/eb-ram'));
+
 % through LAMSS
 %addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/Matlab'));
 %addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/bin'));
