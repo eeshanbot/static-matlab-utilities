@@ -18,21 +18,25 @@ set(0,'DefaultAxesLineWidth',1)
 set(0, 'DefaultFigureColor', 'w');
 set(0, 'DefaultLineLineWidth', 2);
 
+% get home directory (changes in username)
+userName = char(java.lang.System.getProperty('user.name'));
+global homestr;
+homestr = ['/home/' userName '/'];
 
 %% paths for general toolboxes
 restoredefaultpath;
 
-addpath(genpath('/home/eesh/Documents/MATLAB/'));
-addpath(genpath('/home/eesh/LAMSS/lamss-environmental'));
-addpath(genpath('/home/eesh/Code/fig-jam-with-brie'));
-addpath(genpath('/home/eesh/Code/hycom-claw'));
+h_add_gen_path('Documents/MATLAB/');
+h_add_gen_path('LAMSS/lamss-environmental');
+h_add_gen_path('Code/fig-jam-with-brie');
+h_add_gen_path('Code/hycom-claw');
 
 % separately downloaded
-addpath(genpath('/home/eesh/Code/acoustic-toolbox/Matlab'));
-addpath(genpath('/home/eesh/Code/acoustic-toolbox/bin'));
+h_add_gen_path('Code/acoustic-toolbox/Matlab');
+h_add_gen_path('Code/acoustic-toolbox/bin');
 
 % temporary RAM files (clean up and package later)
-addpath(genpath('/home/eesh/Code/abb-code/eb-ram'));
+h_add_gen_path('Code/abb-code/eb-ram');
 
 % through LAMSS
 %addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/Matlab'));
@@ -45,5 +49,14 @@ set(0,'DefaultFigurePosition',[a(3)+1 a(4)+1 b(3) b(4)]);
 
 %% clean up
 clear;
+
+%% helper function
+function [] = h_add_gen_path(subdir)
+global homestr;
+
+addpath(genpath([homestr subdir]));
+
+end
+
 
 
