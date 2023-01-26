@@ -24,19 +24,26 @@ global homestr;
 homestr = ['/home/' userName '/'];
 
 %% paths for general toolboxes
-restoredefaultpath;
+%restoredefaultpath;
 
+% tools
 h_add_gen_path('Documents/MATLAB/');
 h_add_gen_path('LAMSS/lamss-environmental');
 h_add_gen_path('Code/fig-jam-with-brie');
 h_add_gen_path('Code/hycom-claw');
 
+% repos
+h_add_gen_path('Documents/dancing-in-the-deep/src');
+h_add_gen_path('Documents/eddy-or-not/src');
+
 % separately downloaded
 h_add_gen_path('Code/acoustic-toolbox/Matlab');
 h_add_gen_path('Code/acoustic-toolbox/bin');
+h_add_gen_path('Code/acoustic-toolbox/eb-tools');
+
 
 % temporary RAM files (clean up and package later)
-h_add_gen_path('Code/abb-code/eb-ram');
+%h_add_gen_path('Code/abb-code/eb-ram');
 
 % through LAMSS
 %addpath(genpath('/home/eesh/LAMSS/lamss-shared/src/thirdparty/at/Matlab'));
