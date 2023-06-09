@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MATLAB R2020b
+Icon=/home/eesh/.local/share/icons/matlab-icon.png
+Path=/home/eesh
+Exec=matlab -desktop -prefersoftwareopengl
+Terminal=false
+StartupWMClass=MATLAB R2020b - academic use
